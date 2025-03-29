@@ -8,6 +8,18 @@ public class Application {
             System.out.println("Exceção capturada: " + e.getMessage());
         }
 
+        try {
+            userInputValidator.validadeEmail("herbertguarezi@gmail.com");
+        }catch (InvalidUserInputException e){
+            System.out.println("Exceção capturada: " + e.getMessage());
+        }
+
+        try {
+            userInputValidator.validadeCPF("45788748852");
+        }catch (InvalidUserInputException e){
+            System.out.println("Exceção capturada: " + e);
+        }
+
         DatabaseConnector databaseConnector = new DatabaseConnector();
 
         try {
